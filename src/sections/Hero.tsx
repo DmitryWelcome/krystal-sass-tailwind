@@ -1,22 +1,22 @@
-"use client";
-import ArrowIcon from "@/assets/arrow-right.svg";
-import cogImage from "@/assets/cog.png";
-import cylinderImage from "@/assets/cylinder.png";
-import noodleImage from "@/assets/noodle.png";
-import Image from "next/image";
+'use client';
+import ArrowIcon from '@/assets/arrow-right.svg';
+import cogImage from '@/assets/cog.png';
+import cylinderImage from '@/assets/cylinder.png';
+import noodleImage from '@/assets/noodle.png';
+import Image from 'next/image';
 import {
   motion,
   useScroll,
   useTransform,
   useMotionValueEvent,
-} from "framer-motion";
-import { useRef } from "react";
+} from 'framer-motion';
+import { useRef } from 'react';
 
 export const Hero = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
@@ -55,9 +55,9 @@ export const Hero = () => {
               }}
               transition={{
                 repeat: Infinity,
-                repeatType: "mirror",
+                repeatType: 'mirror',
                 duration: 3,
-                ease: "easeInOut",
+                ease: 'easeInOut',
               }}
             />
             <motion.img
